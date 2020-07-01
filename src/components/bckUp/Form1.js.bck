@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+
+class Form1 extends Component {
+
+  formInput = (props) => {
+    props.inputs.map((f, i) => {
+      <div key={i} className="form-group" >
+          <label>{f.name}:</label>
+          <input type={f.type} name={f.name} value={f.value}  
+          className="form-control" placeholder={f.name} />
+      </div>
+    })
+  }
+
+  render() {
+    return(
+      { this.formInput(this.props) }
+    );
+  }
+
+}
+
+export default Form;
